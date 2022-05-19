@@ -1,0 +1,27 @@
+form {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.page_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.input, .output {
+  flex-grow: 1;
+  flex-shrink: 1;
+  min-width: 300pt;
+  padding: 4rem;
+}
+.input {
+  background-color: #ddd;
+}
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  background-color: #BBB;
+}
+.button--hidden {
+  display: none;
+  visibility: hidden;
+}

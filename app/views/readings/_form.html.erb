@@ -1,0 +1,10 @@
+<div>
+  <h2><%= car.to_s.humanize %></h2>
+  <%= form_with(url: readings_path, as: :reading, html: { class: "car_speed_form" }) do |f| %>
+    <%= f.hidden_field :car, value: car %>
+    <%= f.label(:value, "Speed (mph", class: "car_speed_range") do %>
+      <%= f.range_field :value, value: 0, max: 80, min: 0, step: 1, class: "car_speed_range__input" %>
+      <div class="car_speed_range__output">0mph</div>
+    <% end %>
+  <% end %>
+</div>

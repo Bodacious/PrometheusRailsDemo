@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PrometheusDemo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application?t=#{Time.now.to_i}" %>
+    <%= javascript_include_tag "application?t=#{Time.now.to_i}", type: "module" %>
+  </head>
+
+  <body>
+    <div class="page_content">
+      <section class="input">
+        <button class="button button--start" id="start_button">Start</button>
+        <button class="button button--stop button--hidden" id="stop_button">Stop</button>
+        <%= yield %>
+      </section>
+      <section class="output">
+        <pre class="metrics_target"></pre>
+      </section>
+    </div>
+  </body>
+</html>
