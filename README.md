@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Depenendcies
 
-Things you may want to cover:
+Please ensure you have Prometheus installed locally.
 
-* Ruby version
+https://prometheus.io/docs/prometheus/latest/installation/
 
-* System dependencies
+## Installation
 
-* Configuration
+Download this repo with git:
 
-* Database creation
+    git clone https://github.com/Bodacious/PrometheusRailsDemo
 
-* Database initialization
+And then call `$ bin/setup`.
 
-* How to run the test suite
+## Understanding the app
 
-* Services (job queues, cache servers, search engines, etc.)
+Start the app with `$ rails server`
 
-* Deployment instructions
+Head to [localhost:3000](http://localhost:3000) to view the main app page.
 
-* ...
+This simple page repesents two cars, and their respective current speeds
+
+When you hit "start", the page will begin sending the speed of car A and car B to the backend to be counted by Prometheus in a histogram.
+
+Move the sliders left and right to change the speed of each car. These values will continue to be updated in Prometheus as they change.
+
+Open a dashboard in [Prometheus Graph](https://prometheus.io/docs/visualization/browser/) or [Grafana](https://prometheus.io/docs/visualization/grafana/).
+
